@@ -13,8 +13,12 @@ export default function Login() {
     try {
       await authService.login(email, password);
       navigate("/");
-    } catch (err: any) {
-      setError(err);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("An unknown error occurred.");
+      }
     }
   };
 
