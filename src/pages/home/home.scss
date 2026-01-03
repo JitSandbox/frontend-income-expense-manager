@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+.home {
+  padding: 40px;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px 16px;
+    background: $danger;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
